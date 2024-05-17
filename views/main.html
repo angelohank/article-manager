@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Manager</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    .header {
+      width: 100%;
+      padding: 10px;
+      background-color: #343a40;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      margin: 0;
+    }
+    .nav-links li {
+      margin-right: 20px;
+    }
+    .nav-links li:last-child {
+      margin-right: 0;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    .logout {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Article Manager</h1>
+    <ul class="nav-links">
+      <li><a href="#gerenciamento-artigos">Gerenciamento de artigos</a></li>
+      <li><a href="#gerenciamento-usuarios">Gerenciamento de usuários</a></li>
+      <li class="logout"><a href="#logout">Logout</a></li>
+    </ul>
+  </header>
+  <div class="container">
+    <h5>Sistema acessado com sucesso</h5>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

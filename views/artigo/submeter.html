@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submeter Artigo</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      width: 100%;
+      padding: 10px;
+      background-color: #343a40;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      margin: 0;
+    }
+    .nav-links li {
+      margin-right: 20px;
+    }
+    .nav-links li:last-child {
+      margin-right: 0;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    .logout {
+      margin-left: 20px;
+    }
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f8f9fa;
+    }
+    .card {
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+    }
+    .card-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Submeter Artigo</h1>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#gerenciamento-artigos">Gerenciamento de artigos</a></li>
+      <li><a href="#gerenciamento-usuarios">Gerenciamento de usuários</a></li>
+      <li class="logout"><a href="#logout">Logout</a></li>
+    </ul>
+  </header>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">Informe os dados do artigo que deseja submeter</div>
+        <form action="/submeter-artigo" method="post">
+          <div class="form-group">
+            <label for="title">Título:</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+          </div>
+          <div class="form-group">
+            <label for="summary">Resumo:</label>
+            <textarea class="form-control" id="summary" name="summary" rows="3" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="pdf-link">Link para pdf do artigo:</label>
+            <input type="text" class="form-control" id="pdf-link" name="pdf-link" required>
+          </div>
+          <div class="form-group">
+            <label for="author1">Autor 1:</label>
+            <input type="text" class="form-control" id="author1" name="author1" required>
+          </div>
+          <div class="form-group">
+            <label for="author2">Autor 2:</label>
+            <input type="text" class="form-control" id="author2" name="author2">
+          </div>
+          <div class="form-group">
+            <label for="author3">Autor 3:</label>
+            <input type="text" class="form-control" id="author3" name="author3">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submeter para avaliação</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

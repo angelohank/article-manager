@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Artigos</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      width: 100%;
+      padding: 10px;
+      background-color: #343a40;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      margin: 0;
+    }
+    .nav-links li {
+      margin-right: 20px;
+    }
+    .nav-links li:last-child {
+      margin-right: 0;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    .logout {
+      margin-left: 20px;
+    }
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f8f9fa;
+      flex-direction: column;
+    }
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .button-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Gerenciamento de Artigos</h1>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#gerenciamento-usuarios">Gerenciamento de usuários</a></li>
+      <li class="logout"><a href="#logout">Logout</a></li>
+    </ul>
+  </header>
+  <div class="container">
+    <div class="button-group">
+      <button class="btn btn-primary">Listar todos os artigos</button>
+      <div class="button-row">
+        <button class="btn btn-secondary">Listar artigos por autor</button>
+        <input type="text" class="form-control" placeholder="Informe o autor">
+      </div>
+      <div class="button-row">
+        <button class="btn btn-warning">Atribuir avaliadores</button>
+        <input type="text" class="form-control" placeholder="Informe o artigo">
+      </div>
+      <div class="button-row">
+        <button class="btn btn-danger">Excluir artigo</button>
+        <input type="text" class="form-control" placeholder="Informe o artigo">
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
